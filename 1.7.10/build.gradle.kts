@@ -11,7 +11,7 @@ buildscript {
         maven {
             // GTNH RetroFuturaGradle and ASM Fork
             name = "GTNH Maven"
-            url = uri("http://jenkins.usrv.eu:8081/nexus/content/groups/public/")
+            url = uri("https://nexus.gtnewhorizons.com/repository/public/")
             isAllowInsecureProtocol = true
         }
     }
@@ -25,7 +25,7 @@ plugins {
     id("com.modrinth.minotaur") version "2.+"
     id("com.matthewprenger.cursegradle") version "1.4.0"
     // ForgeGradle
-    id("com.gtnewhorizons.retrofuturagradle") version "1.3.26"
+    id("com.gtnewhorizons.retrofuturagradle") version "1.4.0"
 }
 
 val modId = "ingameime"
@@ -44,12 +44,12 @@ repositories {
     }
     maven {
         name = "GTNH Maven"
-        url = uri("http://jenkins.usrv.eu:8081/nexus/content/groups/public/")
+        url = uri("https://nexus.gtnewhorizons.com/repository/public/")
         isAllowInsecureProtocol = true
     }
     maven {
         name = "sonatype"
-        url = uri("https://oss.sonatype.org/content/repositories/snapshots/")
+        url = uri("https://nexus.gtnewhorizons.com/repository/public/")
         content {
             includeGroup("org.lwjgl")
         }
